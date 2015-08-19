@@ -1,0 +1,195 @@
+<div id='top-bar'>%text%</div>
+<div class='content'>
+	<form id='report-form' onsubmit='return false'>
+		<fieldset>
+			<legend class='hide'>located near:</legend>
+			<div class='location'>
+				<h3>Located near:</h3>
+				<p id='form-address'>%address%</p>
+				<a id='change-location' class='button green'>Change</a>
+			</div>
+			<div class='decor'><hr /></div>
+			<ol class='report-form'>
+				<li>
+					<label for='first_name'>First Name:</label>
+					<input id='first_name' type='text'>
+				</li>
+				<li>
+					<label for='last_name'>Last Name:</label>
+					<input id='last_name' type='text'>
+				</li>
+				<li>
+					<label for='phone_number'>Phone:</label>
+					<input id='phone_number' type='tel'>
+				</li>
+				<li>
+					<label for='email_address'>Email:</label>
+					<input id='email_address' type='email'>
+				</li>
+				<!--  conditionals -->
+				<li id='pole_number_li' class='hidden'>
+					<label for='pole_number'>Pole Number:</label>
+					<input id='pole_number' type='number'>
+				</li>
+				<li id='restaurant_li' class='hidden'>
+					<label for='restaurant'>Is this a restaurant?</label>
+					<select id='restaurant'>
+						<option value='Yes'>Yes</option>
+						<option value='No' selected>No</option>
+					</select>
+				</li>
+				<li id='profanity_li' class='hidden'>
+					<label for='profanity'>Graffiti is profane?</label>
+					<select id='profanity'>
+						<option value='Yes'>Yes</option>
+						<option value='No' selected>No</option>
+					</select>
+				</li>
+				<li id='missed_li' class='hidden'>
+					<label>What was missed?</label>
+					<ol class='sub'>
+						<li><label><input type='checkbox' id='check1' name='missed' value='rubbish' checked='checked' class='short'> Rubbish</label></li>
+						<li><label><input type='checkbox' id='check2' name='missed' value='recycling' class='short'> Recycling</label></li>
+						<li><label><input type='checkbox' id='check3' name='missed' value='yard waste' class='short'> Yard Waste</label></li>
+					</ol>
+				</li>				
+				<li id='collection_day_li' class='hidden'>
+					<label for='collection_day'>Regular collection day:</label>
+					<select id='collection_day'>
+						<option value='Monday' selected>Monday</option>
+						<option value='Tuesday'>Tuesday</option>
+						<option value='Wednesday'>Wednesday</option>
+						<option value='Thursday'>Thursday</option>
+						<option value='Friday'>Friday</option>						
+					</select>
+				</li>
+                <!-- traffic signal fields -->
+                <li id='traffic_signal_complaint_type_li' class='hidden'>
+                    <label for='traffic_signal_complaint_type'>Type of complaint:</label>
+                    <select id='traffic_signal_complaint_type'>
+                        <option value='General' selected>General Maintenance</option>
+                        <option value='Driving'>Driving</option>
+                        <option value='Walking'>Walking</option>
+                        <option value='Cycling'>Cycling</option>
+                    </select>
+                </li>
+                <li id='traffic_signal_complaint_li' class='hidden'>
+                    <label for='traffic_signal_complaint'>Complaint:</label>
+                    <select id='traffic_signal_complaint'><option></option></select>
+                </li>
+                <!-- end traffic signal fields
+                <!-- traffic sign fields -->
+                <li id='traffic_sign_type_li' class='hidden'>
+                    <label for='traffic_sign_type'>Type of sign:</label>
+                    <select id='traffic_sign_type'>
+                        <option>Do not enter</option>
+                        <option>Disabled</option>
+                        <option>Loading zone</option>
+                        <option>No parking</option>
+                        <option>No stopping</option>
+                        <option>One way</option>
+                        <option>Resident permit parking</option>
+                        <option>Snow emergency</option>
+                        <option>Speed limit</option>
+                        <option>Stop</option>
+                        <option>Street cleaning</option>
+                        <option>Street name</option>
+                        <option>Other</option>
+                    </select>
+                </li>
+                <li id='traffic_sign_type_other_li' class='hidden'>
+                    <label for='traffic_sign_type_other'>Other:</label>
+                    <input id='traffic_sign_type_other' type='text' />
+                </li>
+                <li id='traffic_sign_complaint_li' class='hidden'>
+                    <label for='traffic_sign_complaint'>Complaint:</label>
+                    <select id='traffic_sign_complaint'>
+                        <option>Sign is missing</option>
+                        <option>Sign has been vandalized</option>
+                        <option>Sign is faded or illegible</option>
+                        <option>Sign is facing the wrong direction</option>
+                        <option>Move the sign to another location</option>
+                        <option>Remove sign</option>
+                        <option>Change the sign</option>
+                    </select>
+                </li>
+                <!-- end traffic sign fields -->
+                <!-- bike rack fields -->
+                <li id='bike_rack_request_li' class='hidden'>
+                    <label for='bike_request_type'>Request:</label>
+                    <select id='bike_request_type'>
+                        <option value='Repair damaged rack'>Repair damaged rack</option>
+                        <option value='Install new rack'>Install new rack</option>
+                    </select>
+                </li>
+                <li id='bike_rack_type_li' class='hidden'>
+                    <label for='bike_rack_type_li'>Type of Rack:</label>
+                    <select id='bike_rack_type'>
+                        <option>Inverted U</option>
+                        <option>Post and ring</option>
+                        <option>Swerve</option>
+                        <option>Multiple racks on a rail</option>
+                        <option>Other / not sure</option>
+                    </select>
+                </li>
+                <li id='bike_rack_damage_type_li' class='hidden'>
+                    <label for='bike_rack_damage_type'>Type of Damage:</label>
+                    <select id='bike_rack_damage_type'>
+                        <option>Rack is damaged</option>
+                        <option>Rack has been vandalized</option>
+                        <option>Rack is missing</option>
+                    </select>
+                </li>
+                <!-- end of bike rack fields -->
+                <!-- tree maintenance fields -->
+                <li id='tree_maint_action_li' class='hidden'>
+                    <label for='tree_maint_action'>Action:</label>
+                    <select id='tree_maint_action'>
+                        <option>Prune tree</option>
+                        <option>Plant tree</option>
+                        <option>Inspect tree for pest/disease</option>
+                        <option>Other</option>
+                    </select>
+                </li>
+                <!-- end tree maintenance -->
+                <!-- taxi complaint fields -->
+                <li id='taxi_complaints_medallion_num_li' class='hidden'>
+                    <label for='taxi_complaint_medallion_num'>Medallion #:</label>
+                    <input type='text' id='medallion_number'>
+                </li>
+                <li id='taxi_complaints_plate_num_li' class='hidden'>
+                    <label for='taxi_complaint_medallion_num'>Plate #:</label>
+                    <input type='text' id='plate_number'>
+                </li>
+                <li id='taxi_complaints_pickup_time_li' class='hidden'>
+                    <label for='taxi_complaint_pickup_time'>Pickup Time:</label>
+                    <input type='time' class='fullwidthfix' id='time'>
+                </li>
+                <li id='taxi_complaints_date_li' class='hidden'>
+                    <label for='taxi_complaint_date'>Date:</label>
+                    <input type='date' class='fullwidthfix' id='date'>
+                        </li>
+                <li id='taxi_complaints_report_type_li' class='hidden'>
+                    <label for='taxi_complaint_report_type'>Report:</label>
+                    <select id='report'>
+                        <option>Refused to transport</option>
+                        <option>Overcharged</option>
+                        <option>Rude and Discourteous</option>
+                        <option>Refused to take credit card</option>
+                        <option>Wrong route or location</option>
+                        <option>Compliment</option>
+                        <option>Other</option>
+                    </select>
+                </li>
+                <!-- end taxi complaint -->
+				<!--  end conditionals -->
+				<li>
+					<label for='description' class='textarea' type='text'>Include additional info (optional)</label>
+					<textarea id='description' name='Additional Info'></textarea>
+				</li>
+			</ol>
+			<button id='cancel-form' type='reset' class='red'>Cancel</button>
+			<button id='submit-form' type='submit' class='gold'>Submit</button>
+		</fieldset>
+	</form>
+</div>
