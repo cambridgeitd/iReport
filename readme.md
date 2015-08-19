@@ -6,6 +6,7 @@ Cambridge iReport allows users to report common problems such as potholes, graff
 
 ## Configuring and Building the Application
 Customizing the application for your needs is a simple process:
+
 1. Clone this repository
 2. Edit the Cordova configuration (`/www/config.xml`) to suit your needs
 3. Implement the [required web services](https://github.com/cambridgeitd/iReport/wiki/Webservices) iReport needs to interact with your back-end work order system
